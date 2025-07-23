@@ -1,3 +1,5 @@
+YAML
+
 ---
 layout: layout.njk
 title: Welcome
