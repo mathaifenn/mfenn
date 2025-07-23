@@ -1,5 +1,12 @@
 [build]
-  base    = "mfenn"
-  publish = "_site"
   command = "npx @11ty/eleventy"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 
