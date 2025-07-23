@@ -1,29 +1,19 @@
 #!/bin/bash
 
-# Usage: ./git-update.sh "Your commit message"
+# Usage: ./gitupdate.sh "Your commit message"
 
-# Check for commit message
+# This script stages, commits, and pushes all changes to GitHub using cached credentials.
+
+# -------------------------------
+# Step 0: Ensure credential helper is enabled
+git config --global credential.helper store
+
+# Step 1: Check if commit message is provided
 if [ -z "$1" ]; then
   echo "❗ Please provide a commit message."
-  echo "Usage: ./git-update.sh \"Updated blog post\""
+  echo "Usage: ./gitupdate.sh \"Updated site content\""
   exit 1
 fi
 
-# Show current status
-echo "🔍 Checking status..."
-git status
-
-# Add all changes
-echo "📂 Adding all changes..."
-git add .
-
-# Commit with message
-echo "📝 Committing..."
-git commit -m "$1"
-
-# Push to GitHub
-echo "🚀 Pushing to GitHub..."
-git push
-
-echo "✅ Done! Netlify will now redeploy your site."
+# Step
 

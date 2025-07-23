@@ -3,7 +3,7 @@ layout: layout.njk
 title: Welcome
 ---
 
-# Welcome to fenn.net
+# Welcome to My Home on the Internet
 
 This is the digital front porch of **Dr. Mathai Fenn** — cognitive psychologist, educator, and explorer of insight.
 
