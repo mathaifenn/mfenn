@@ -1,21 +1,20 @@
 ---
-layout: layout.njk
-title: Welcome
+title: "Welcome to My Site"
+layout: "layout.njk"
+description: "This is the homepage of Mathai Fenn's site built with Eleventy."
 ---
 
-Welcome to **fenn.net**
+# Hello from Eleventy!
 
-This is the digital front porch of Dr. Mathai Fenn.
+This is your new homepage.
 
-Explore ideas, essays, and conversations that reflect a life woven from insight, learning, and transformation.
+You can edit this file at `index.md`.
 
----
+## Next Steps
 
-### Navigate
-- [Blog](/blog/)
-- [Gallery](#)
-- [Videos](#)
-- [About](#)
+- Try editing this content.
+- Add new pages inside the `blog/` folder.
+- Customize your layout in `_includes/layout.njk`.
 
-> “Let the form be light, and the function be deep.”
+Happy publishing!
 
