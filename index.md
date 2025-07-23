@@ -5,19 +5,40 @@ title: Welcome
 
 # Welcome to My Home on the Internet
 
-This is the digital front porch of **Dr. Mathai Fenn** — cognitive psychologist, educator, and explorer of insight.
 
-> “Let the form be light, and the function be deep.”
 
-With over three decades of experience in psychology, leadership development, and transformative education, Mathai brings a rare blend of clarity, compassion, and conceptual depth. His work bridges **cognitive science**, **Gestalt theory**, **AI**, and **organizational design** — all rooted in a deep love for culture and human growth.
+I’m **Dr. Mathai Fenn** — a cognitive psychologist, educator, and explorer of insight.
 
-## Areas of Work
+Over the past three decades, my journey has woven together the rigour of science with the wonder of human growth. I’ve taught at institutions across India, the Middle East, and Europe, including **XLRI**, **IIM Kozhikode**, **IIT Gandhinagar**, and the **American University of Armenia**. My work draws deeply from **cognitive science**, **Gestalt theory**, **AI**, and the **philosophy of learning** — but always returns to the simple, timeless question: *How do we live well and wisely in a changing world?*
 
-- 🌱 Transformative Learning Models
-- 🧠 Insight-Driven Cognitive Psychology
-- 🤖 Ethical AI & Reflective Technology
-- 🏡 Sustainability & Community Living (Fenn Hall & Fenn Farm)
-- 🕊️ Spiritual Inquiry & Christian Mysticism
+---
+
+## My Work Touches Many Worlds:
+
+- 🧠 **Psychology & Learning**  
+  Designing transformative education models that go beyond rote — into reflection, insight, and self-knowledge.
+
+- 🤖 **AI & Human Systems**  
+  Helping individuals and organizations adapt to intelligent technologies with wisdom and clarity.
+
+- 🏡 **Sustainability & Community Living**  
+  Co-creating real-world models like **Fenn Hall** and **Fenn Farm**, where learning, ecology, and shared life converge.
+
+- ✨ **Spiritual Inquiry & Christian Mysticism**  
+  Rooted in a non-dual, inclusive understanding of God — one that is loving, beautiful, and alive in all things.
+
+---
+
+## More Than a Profession
+
+This site is my **digital porch** — a place where essays, ideas, and conversations can gather. You’ll find blog posts, reflections, experiments with AI, notes on philosophy, and glimpses into a life that seeks meaning in both thought and action.
+
+> *“Let the form be light, and the function be deep.”*
+
+Thank you for visiting.  
+Let’s keep the conversation alive.
+
+---
 
 ## Explore the Site
 
