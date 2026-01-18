@@ -1,0 +1,8 @@
+cd /home/mathaifenn/websites/mfenn
+nano _redirects
+```
+
+Add these lines:
+```
+https://jessy.fenn.net/*  https://www.linkedin.com/in/dr-jessy-fenn/  301!
+https://rohit.fenn.net/*  https://www.linkedin.com/in/rohit-fenn/  301!
