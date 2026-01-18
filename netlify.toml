@@ -1,12 +1,7 @@
 [build]
-  command = "npx @11ty/eleventy"
-  publish = "_site"
-
-[build.environment]
-  NODE_VERSION = "18"
+  publish = "."
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
