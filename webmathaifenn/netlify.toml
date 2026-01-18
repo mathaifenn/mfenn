@@ -1,8 +1,0 @@
-[build]
-command = ""                # No build step
-publish = "."               # Serve files from current folder
-
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200

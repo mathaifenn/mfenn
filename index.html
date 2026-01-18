@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Mathai Fenn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg-banner: #0a0a0a;
+            --color-bg-sidebar: #1a1a1a;
+            --color-bg-main: #111111;
+            --color-text-primary: #e8e6e3;
+            --color-text-secondary: #b8b5b0;
+            --color-accent: #d4af37;
+            --color-link: #c9a961;
+            --color-link-hover: #e8d4a0;
+            
+            --font-serif: 'Crimson Text', 'Georgia', serif;
+            --font-display: 'Spectral', 'Baskerville', serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-serif);
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-main);
+        }
+
+        /* Banner */
+        .banner {
+            background-color: var(--color-bg-banner);
+            padding: 2rem;
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .banner-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .banner h1 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
+            margin: 0;
+        }
+
+        /* Layout Container */
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            background-color: var(--color-bg-sidebar);
+            padding: 2rem 1.5rem;
+            position: sticky;
+            top: 100px;
+            height: calc(100vh - 100px);
+            overflow-y: auto;
+            border-right: 1px solid #333;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+        }
+
+        .sidebar nav ul li {
+            margin-bottom: 1.2rem;
+        }
+
+        .sidebar nav ul li a {
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+            display: block;
+        }
+
+        .sidebar nav ul li a:hover,
+        .sidebar nav ul li a.active {
+            color: var(--color-link-hover);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 3rem 4rem;
+            max-width: 900px;
+        }
+
+        /* Typography */
+        h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            color: var(--color-accent);
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.03em;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--color-link);
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        p:first-of-type::first-letter {
+            font-size: 3.5rem;
+            line-height: 1;
+            float: left;
+            margin: 0.1rem 0.15rem 0 0;
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+
+        a {
+            color: var(--color-link);
+            text-decoration: underline;
+            text-decoration-color: rgba(201, 169, 97, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-link-hover);
+            text-decoration-color: rgba(232, 212, 160, 0.6);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 4rem;
+            padding-top: 2rem;
+        }
+
+        /* Image */
+        .profile-container {
+            max-width: 300px;
+            margin: 2rem 0;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border: 1px solid #333;
+            margin: 0 0 0.5rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            display: block;
+        }
+
+        .photo-credit {
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+            font-style: italic;
+            margin-bottom: 0;
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        p.photo-credit::first-letter {
+            font-size: inherit !important;
+            float: none !important;
+            margin: 0 !important;
+            font-weight: normal !important;
+            color: inherit !important;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .banner {
+                position: relative;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .banner-photo {
+                display: none;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                top: 0;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid #333;
+            }
+
+            .main-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .banner h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner -->
+    <header class="banner">
+        <a href="assets/darkmathai.jpg" target="_blank">
+            <img src="assets/darkmathai.jpg" alt="Dr. Mathai Fenn" class="banner-photo">
+        </a>
+        <h1>Dr. Mathai Fenn</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#welcome">Welcome</a></li>
+                    <li><a href="#work">What I Do</a></li>
+                    <li><a href="#bio">Brief Biography</a></li>
+                    <li><a href="#framework">Framework</a></li>
+                    <li><a href="#history">History</a></li>
+                    <li><a href="#family">Family</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" target="_blank">Detailed Bio (PDF)</a></li>
+                    <li><a href="#" target="_blank">Blog</a></li>
+                    <li><a href="#" target="_blank">Library</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section id="welcome">
+                <div class="profile-container">
+                    <img src="assets/darkmathai.jpg" alt="Dr. Mathai Fenn" class="profile-image">
+                    <p class="photo-credit">Dr. Mathai Fenn<br>
+                    Cognitive Psychologist<br>
+                    PhD, Indian Institute of Technology Bombay<br>
+                    Former Faculty, XLRI Jamshedpur</p>
+                </div>
+
+                <p>I am glad you could stop by. Come on in, grab a cup of chai, and let's get to know each other better.</p>
+                
+                <p>This page is a bit different from most professional websites. You won't find carefully curated case studies or six-step transformation promises. What you will find is something more honest: a record of what I've learned over forty years by paying attention, making mistakes, and taking the time to think clearly when most people prefer to move fast.</p>
+                
+                <p>I work with people and institutions when the stakes are high and the answers aren't obvious. Not because I have all the answers—I don't—but because I've learned how to hold space for difficult questions without rushing to easy conclusions.</p>
+                
+                <p>If you're here because someone mentioned my name, or you read something I wrote, or you're facing a decision that feels too important to get wrong—you're in the right place. Take your time. Read what speaks to you. Skip what doesn't. And if you're curious about my work in more detail, visit <a href="https://www.thetalkshop.in" target="_blank">www.thetalkshop.in</a>.</p>
+            </section>
+
+            <!-- What I Do Section -->
+            <section id="work">
+                <h2>What I Do</h2>
+                
+                <p>I help people think clearly when they're facing important decisions that feel confusing or overwhelming. Not by telling them what to do, but by helping them slow down and see their situation clearly enough to decide for themselves.</p>
+                
+                <p>I work with three kinds of people: students and families dealing with education choices, healthcare professionals and patients navigating complex medical situations, and leaders trying to make sense of strategic decisions when their usual frameworks aren't working anymore.</p>
+                
+                <p>I use AI as a tool to organize information and hold context, but the actual thinking and deciding stays with people. You can learn more about my work at <a href="https://www.thetalkshop.in" target="_blank">The Talkshop</a>.</p>
+                
+                <p>If you want to work together, <a href="#contact">send me an email</a> describing what you're facing. We'll take it from there.</p>
+            </section>
+
+            <!-- Brief Biography Section -->
+            <section id="bio">
+                <h2>Brief Biography</h2>
+                
+                <p>I am a cognitive psychologist and educator with a PhD from the Indian Institute of Technology Bombay. I have spent much of my working life helping people think clearly when situations feel confusing, pressured, or uncertain. I have worked with individuals, families, and organizations across education, healthcare, and leadership contexts—often at moments when the cost of confusion is high and there are no easy answers.</p>
+                
+                <p>Today, my work focuses on helping people and institutions prepare for a non-linear future that is already here: one in which familiar assumptions no longer hold and decisions carry deeper consequences. I help people slow things down, see the full picture, and regain clarity before making important choices. I don't give quick-fix advice. Instead, I help people understand what is really going on so they can decide responsibly for themselves.</p>
+                
+                <p>I use AI quietly as a support tool to reduce confusion and hold context, while keeping judgment, responsibility, and human connection firmly in human hands.</p>
+            </section>
+
+            <!-- Framework Section -->
+            <section id="framework">
+                <h2>How I Think About This Work</h2>
+                
+                <p>Most psychological approaches treat human beings as problems to be solved or systems to be optimized. I don't work that way.</p>
+                
+                <p>My approach draws from gestalt psychology, hermeneutic phenomenology, and systems theory—which sounds more complicated than it is. Here's what it means in practice: I start with the assumption that you already understand your situation better than I ever will. My job isn't to diagnose you or prescribe solutions. My job is to help you see what you already know but haven't yet put into words.</p>
+                
+                <p>Think of it this way: when you look at a complex painting, you don't see individual brushstrokes first. You see the whole image—the gestalt—and only then do you notice the details. Human experience works the same way. We live in wholes, not parts. But when we're confused or under pressure, we lose sight of the whole and get lost in fragments.</p>
+                
+                <p>What I do is help you step back far enough to see the whole picture again. Not by adding more information—you're probably drowning in information already—but by helping you recognize the pattern that's been there all along.</p>
+                
+                <p>This isn't mystical. It's just what happens when someone creates enough space for clarity to emerge. And it works because understanding isn't something I give you. It's something you recover for yourself.</p>
+                
+                <p>I have spent forty-four years developing this approach, and I am currently writing a book about it for academic publication. If you want the full theoretical foundation, you will have to wait for <em>A Necklace of Pearls: Gestalt, Meaning, and What Makes Us Human</em> (Routledge, forthcoming). For now, this sketch will have to do.</p>
+            </section>
+
+            <!-- History Section -->
+            <section id="history">
+                <h2>How I Got Here</h2>
+                
+                <p>In 1981, I was eighteen and made what my family thought was a strange choice: I left home to study psychology. My father was a psychiatrist who discussed human behavior over dinner in clinical, detached terms. When I objected, he'd cite theory. I wanted to see for myself what the theory actually said. Turned out, academic psychology felt just as cold to me as those dinner conversations. But then I discovered humanistic psychology—Fromm, Laing, Marcel—and realized psychology could be an art, not just a science. That's when things got interesting.</p>
+                
+                <p>I earned my PhD from IIT Bombay, but along the way I did things that had nothing to do with academic credentials. I trained in karate under Master Kuppuswamy and earned a black belt in 1984—not because I wanted to fight, but because I wanted to understand what happens when your body knows something your mind doesn't. I worked as Santa Claus in a department store one Christmas season, learning what it means to hold space for other people's joy and longing without performing or faking it. I acted in theatre, discovering that presence matters more than technique, and that the space between people is as important as what gets said.</p>
+                
+                <p>These weren't hobbies. They were laboratories for understanding human experience in ways psychology textbooks couldn't teach.</p>
+                
+                <p>Today, I am deeply interested in artificial intelligence—not because I think machines will replace humans, but because AI forces us to ask what makes human thinking distinctive. We do not have a test for comparing human and machine intelligence because we do not really understand what makes us human in the first place. That is not a technical problem. It is a philosophical one. And it is exactly the question I have been circling for forty years.</p>
+                
+                <p>I also taught at XLRI Jamshedpur for several years, where I learned that the best teaching isn't about transferring knowledge—it's about creating conditions where people can think clearly for themselves.</p>
+            </section>
+
+            <!-- Family Section -->
+            <section id="family">
+                <h2>Family</h2>
+                
+                <p>I live in Kerala, India, with my wife Jessy, who is—among many other things—a far better judge of character than I am. We have two adult children, Amit and Rohit, both of whom have had the good sense to pursue lives that don't require explaining themselves to strangers on the internet.</p>
+                
+                <p>You can learn more about them at their own sites: <a href="http://jessy.fenn.net">Jessy</a>, <a href="http://amit.fenn.net">Amit</a>, and <a href="http://rohit.fenn.net">Rohit</a>. Or visit our <a href="http://www.fenn.net">family site</a>.</p>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h2>Contact</h2>
+                
+                <p>If you'd like to get in touch, the best way is by email: <a href="mailto:mathai@fenn.net">mathai@fenn.net</a></p>
+                
+                <p>You can also find me on <a href="https://www.linkedin.com/in/mathaifenn" target="_blank">LinkedIn</a> if that's how you prefer to connect.</p>
+                
+                <p>I don't promise immediate responses, but I do promise to read carefully what you send.</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
